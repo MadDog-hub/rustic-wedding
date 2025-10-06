@@ -156,7 +156,7 @@ const StorySection = () => {
   return (
     <motion.section 
       id="story" 
-      className="section-hard-blue relative overflow-hidden"
+      className="section-hard-blue relative overflow-hidden isolate"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 3.5 } : { duration: 0 }}
