@@ -206,19 +206,20 @@ const StorySection = () => {
       {/* Horizontal Scrolling Container */}
       <div 
         ref={containerRef} 
-        className="relative overflow-x-hidden overflow-y-visible"
+        className="relative overflow-hidden"
         style={{ height: '100vh' }}
       >
         <div 
           ref={horizontalRef}
-          className="flex h-full items-center"
+          className="flex h-full items-center will-change-transform"
           style={{ width: `${storyCards.length * 100 + 100}vw` }}
         >
           {/* Story Cards */}
           {storyCards.map((card, index) => (
             <div
               key={card.id}
-              className="story-card flex-shrink-0 w-screen h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12"
+              className="story-card flex-shrink-0 h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12"
+              style={{ width: '100vw', minWidth: '100vw' }}
             >
               <div 
                 className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-sm"
