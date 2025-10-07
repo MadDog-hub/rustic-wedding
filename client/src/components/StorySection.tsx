@@ -78,9 +78,9 @@ const StorySection = () => {
     const scrollTriggerInstance = ScrollTrigger.create({
       trigger: container,
       start: "top top",
-      end: () => `+=${(horizontal.scrollWidth - container.offsetWidth) * 2}`,
+      end: () => `+=${(horizontal.scrollWidth - container.offsetWidth) * 5}`,
       pin: true,
-      scrub: 1.5,
+      scrub: 2,
       animation: horizontalScrollTween,
       invalidateOnRefresh: true,
       anticipatePin: 1,
