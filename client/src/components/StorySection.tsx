@@ -68,19 +68,24 @@ const StorySection = () => {
 
     if (!container || !horizontal || !animationsEnabled) return;
 
+    // Detect mobile/tablet viewports
+    const isMobile = window.innerWidth < 1024;
+    const scrollMultiplier = isMobile ? 20 : 10;
+    const scrubValue = isMobile ? 5 : 3;
+
     // Create horizontal scrolling animation with dynamic width calculation
     const horizontalScrollTween = gsap.to(horizontal, {
       x: () => -(horizontal.scrollWidth - container.offsetWidth),
       ease: "none",
     });
 
-    // Create ScrollTrigger with dynamic end calculation
+    // Create ScrollTrigger with dynamic end calculation - Give each card much more vertical scroll space
     const scrollTriggerInstance = ScrollTrigger.create({
       trigger: container,
       start: "top top",
-      end: () => `+=${(horizontal.scrollWidth - container.offsetWidth) * 5}`,
+      end: () => `+=${(horizontal.scrollWidth - container.offsetWidth) * scrollMultiplier}`,
       pin: true,
-      scrub: 2,
+      scrub: scrubValue,
       animation: horizontalScrollTween,
       invalidateOnRefresh: true,
       anticipatePin: 1,
