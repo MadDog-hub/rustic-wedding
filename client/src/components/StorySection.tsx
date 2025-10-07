@@ -60,8 +60,8 @@ const StorySection = () => {
 
     // Detect mobile/tablet viewports
     const isMobile = window.innerWidth < 1024;
-    const scrollMultiplier = isMobile ? 6 : 4;
-    const scrubValue = isMobile ? 1.5 : 1.2;
+    const scrollMultiplier = isMobile ? 3 : 2;
+    const scrubValue = isMobile ? 0.3 : 0.2;
 
     // Create horizontal scrolling animation with dynamic width calculation
     const horizontalScrollTween = gsap.to(horizontal, {
