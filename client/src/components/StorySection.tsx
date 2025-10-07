@@ -4,16 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 import { Sparkles, Star, Ship, Heart, Infinity } from 'lucide-react';
-// Story images - Love story progression
-import storyImage1 from '@assets/lovestory1_1759591965203.png';
-import storyImage2 from '@assets/lovestory2_1759591965204.png';
-import storyImage3 from '@assets/lovestory3_1759591965205.png';
-import storyImage4 from '@assets/lovestory4_1759591965203.png';
-import storyImage5 from '@assets/loveStory5_1759591965205.png';
-// Flower decorations
-import flower3 from '@assets/flower3_1759741371015.png';
-import flower5 from '@assets/flower5_1759741371013.png';
-import flower7 from '@assets/flower7_1759741371011.png';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -29,35 +19,35 @@ const StorySection = () => {
       id: 1,
       title: "How We Met",
       text: "We met while serving in church ministry, unaware of how meaningful that moment would become. What started as friendship grew into a special bond through faith.",
-      image: storyImage1,
+      image: "/images/lovestory1_1759591965203.png",
       icon: Sparkles
     },
     {
       id: 2, 
       title: "Dreams Together",
       text: "We found love in the simple moments—shared dreams and quiet support. Even as one journeyed abroad and the other set sail across the ocean, our hearts kept moving in the same direction, always dreaming together.",
-      image: storyImage2,
+      image: "/images/lovestory2_1759591965204.png",
       icon: Star
     },
     {
       id: 3,
       title: "Oceans Apart", 
       text: "Though miles and oceans lay between us, love bridged the distance. With every challenge, our hearts grew closer, always moving as one.",
-      image: storyImage3,
+      image: "/images/lovestory3_1759591965205.png",
       icon: Ship
     },
     {
       id: 4,
       title: "The Decision",
       text: "We chose to wait for the right time, setting aside our dream wedding to focus on what mattered most—supporting one another. With a simple civil union as our beginning, we now look forward to celebrating our love in its fullness.",
-      image: storyImage4,
+      image: "/images/lovestory4_1759591965203.png",
       icon: Heart
     },
     {
       id: 5,
       title: "Our Future",
       text: "Today we celebrate a promise made possible by God's grace. With Him at the center, we step into the future together.",
-      image: storyImage5,
+      image: "/images/loveStory5_1759591965205.png",
       icon: Infinity
     }
   ];
@@ -233,9 +223,9 @@ const StorySection = () => {
                 data-testid={`card-story-${card.id}`}
               >
                 {/* Flower Decorations */}
-                <img src={flower3} alt="" className="absolute top-2 left-2 w-16 md:w-20 opacity-80 pointer-events-none" />
-                <img src={flower5} alt="" className="absolute bottom-2 right-2 w-20 md:w-24 opacity-80 pointer-events-none transform rotate-12" />
-                <img src={flower7} alt="" className="absolute top-2 right-2 w-12 md:w-16 opacity-70 pointer-events-none transform -rotate-12" />
+                <img src="/images/flower3_1759741371015.png" alt="" className="absolute top-2 left-2 w-16 md:w-20 opacity-80 pointer-events-none" />
+                <img src="/images/flower5_1759741371013.png" alt="" className="absolute bottom-2 right-2 w-20 md:w-24 opacity-80 pointer-events-none transform rotate-12" />
+                <img src="/images/flower7_1759741371011.png" alt="" className="absolute top-2 right-2 w-12 md:w-16 opacity-70 pointer-events-none transform -rotate-12" />
                 
                 {/* Content */}
                 <div className={`space-y-6 sm:space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
